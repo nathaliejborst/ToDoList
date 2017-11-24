@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.nathalie.todolist.MainActivity">
+
+    <TextView
+        android:id="@+id/priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Choose your priority:"
+        android:textColor="@android:color/black"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/priority"
+        android:background="#8e1d21"
+        android:text="  Very urgent  "
+        android:textSize="12dp"
+        android:textColor="#ffff"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/priority"
+        android:layout_toRightOf="@id/button1"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:background="#1c8e7b"
+        android:text="  Important  "
+        android:textSize="12dp"
+        android:textColor="#ffff"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/priority"
+        android:layout_toRightOf="@id/button2"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:background="#404746"
+        android:text="  Normal  "
+        android:textColor="#ffff"
+        android:textSize="12dp"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/toDoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="#1a4078"
+        android:fontFamily="@font/dosis_medium"
+        android:paddingBottom="14dp"
+        android:paddingTop="7dp"
+        android:text="TO-DO"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/LV"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:divider="#3F51B5"
+        android:dividerHeight="2px">
+
+    </ListView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="270dp"
+            android:layout_marginEnd="9dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_gravity="bottom"
+            android:hint="To do" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:text="Add"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
